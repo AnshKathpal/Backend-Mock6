@@ -29,7 +29,7 @@ userRoute.post("/register", async (req, res) => {
       });
     }
   } catch (error) {
-    res.status(400).json({ error: error.message });
+    res.status(400).end({ error: error.message });
   }
 });
 
@@ -59,7 +59,7 @@ userRoute.post("/login", async(req,res) => {
         
     } catch (error) {
         
-        res.status(400).json({error : error.message})
+        res.status(400).end({error : error.message})
 
     }
 

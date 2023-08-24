@@ -26,7 +26,7 @@ postRoute.post("/blogs", middleware, async (req, res) => {
   } catch (error) {
 
     console.log(error)
-    res.status(404).send(error.message)
+    res.status(404).end(error.message)
 
   }
 });
