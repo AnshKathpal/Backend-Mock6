@@ -24,7 +24,7 @@ userRoute.post("/register", async (req, res) => {
             password: hash,
           });
           await user.save();
-          res.status(200).json({ msg: "User Registered" });
+          res.status(200).end({ msg: "User Registered" });
         }
       });
     }
@@ -54,7 +54,7 @@ userRoute.post("/login", async(req,res) => {
             })
         }
         else{
-            res.status(400).json({err : "User Doesn't exists. Please SignUp"})
+            res.status(400).end({err : "User Doesn't exists. Please SignUp"})
         }
         
     } catch (error) {
