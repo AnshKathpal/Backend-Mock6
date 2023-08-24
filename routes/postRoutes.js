@@ -54,7 +54,7 @@ postRoute.get("/blogs", middleware, async (req, res) => {
     res.status(200).send(posts);
   } catch (error) {
     console.log(error.message);
-    res.status(400).send(error.message);
+    res.status(400).end(error.message);
   }
 });
 
